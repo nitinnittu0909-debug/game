@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird - Animated</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="gameContainer">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div id="score">0</div>
+            <div id="highScore">Best: 0</div>
+            
+            <div id="startScreen">
+                <div class="title">Flappy Bird</div>
+                <div class="subtitle">Tap to Fly!</div>
+                <div class="bird-preview"></div>
+                <button id="startBtn">Start Game</button>
+            </div>
+            
+            <div id="gameOverScreen" class="hidden">
+                <div class="game-over-title">Game Over!</div>
+                <div class="score-container">
+                    <div class="current-score">Score: <span id="finalScore">0</span></div>
+                    <div class="best-score">Best: <span id="bestScore">0</span></div>
+                </div>
+                <button id="restartBtn">Play Again</button>
+            </div>
+
+            <div id="controls">
+                <div class="control-item">SPACE / CLICK / TAP</div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="flapSound" src="https://assets.mixkit.co/sfx/preview/mixkit-bird-whistling-1450.mp3"></audio>
+    <audio id="hitSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-explosion-2759.mp3"></audio>
+    <audio id="pointSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-mechanical-bling-210.mp3"></audio>
+
+    <script src="game.js"></script>
+</body>
+</html>
